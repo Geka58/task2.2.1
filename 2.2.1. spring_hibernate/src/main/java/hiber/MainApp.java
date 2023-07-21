@@ -49,16 +49,16 @@ public class MainApp {
             System.out.println("First Name = " + user.getFirstName());
             System.out.println("Last Name = " + user.getLastName());
             System.out.println("Email = " + user.getEmail());
+            System.out.println(user.getCar());
             System.out.println();
         }
 
         try {
-            User user = userService.findByUser("AUDI", 7);
+            User user = userService.findUserByCar("AUDI", 7);
             System.out.println(user);
         } catch (NoResultException e) {
             System.out.println("Нет такого Users с такой машиной");
         }
-
 
         context.close();
     }
